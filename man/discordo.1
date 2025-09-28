@@ -1,0 +1,205 @@
+.TH DISCORDO 1 "2024-07-16" "Discordo Manual" "User Commands"
+.SH NAME
+discordo \- A lightweight, terminal-based Discord client
+.SH SYNOPSIS
+.B discordo
+.SH DESCRIPTION
+Discordo is a lightweight, terminal-based Discord client with keyboard-focused navigation and markdown support.
+.SH CONFIGURATION OPTIONS
+.SS General Settings
+.TP
+.B mouse = true
+Enable/disable mouse support
+.TP
+.B editor = "default"
+Program to open when editing messages (uses $EDITOR when set to "default")
+.TP
+.B status = "default"
+User status: "default", "online", "dnd", "idle", "invisible", or "offline"
+.TP
+.B markdown = true
+Enable/disable markdown parsing in messages
+.TP
+.B autocomplete_limit = 20
+Number of autocomplete suggestions (0 to disable)
+.TP
+.B messages_limit = 50
+Number of messages to load per channel (0-100)
+.SS Timestamps
+.TP
+.B enabled = true
+Show message timestamps
+.TP
+.B format = "3:04PM"
+Timestamp format (Go time layout)
+.SS Notifications
+.TP
+.B enabled = true
+Enable/disable notifications
+.TP
+.B duration = 0
+Notification sound duration (0 for default)
+.TP
+.B sound.enabled = true
+Enable/disable notification sounds
+.TP
+.B sound.only_on_ping = true
+Only play sound on direct mentions
+.SH KEYBINDINGS
+.SS Global Shortcuts
+.TP
+.B Ctrl+G
+Focus guilds (servers) tree
+.TP
+.B Ctrl+T
+Focus messages list
+.TP
+.B Ctrl+Space
+Focus message input
+.TP
+.B Ctrl+B
+Toggle guilds tree visibility
+.TP
+.B Ctrl+C
+Quit application
+.TP
+.B Ctrl+D
+Log out and remove authentication token
+.SS Guilds Tree Navigation
+.TP
+.B k
+Select previous guild/channel
+.TP
+.B j
+Select next guild/channel
+.TP
+.B g
+Select first guild/channel
+.TP
+.B G
+Select last guild/channel
+.TP
+.B Enter
+Select channel or expand guild
+.TP
+.B i
+Yank (copy) guild/channel ID
+.TP
+.B -
+Collapse parent node
+.TP
+.B p
+Move to parent node
+.SS Messages List Navigation
+.TP
+.B k
+Select previous message
+.TP
+.B j
+Select next message
+.TP
+.B g
+Select first message
+.TP
+.B G
+Select last message
+.TP
+.B s
+Select message reference (reply)
+.TP
+.B r
+Reply to selected message
+.TP
+.B R
+Reply with mention to selected message
+.TP
+.B Esc
+Cancel selection
+.TP
+.B D
+Delete selected message (with confirmation)
+.TP
+.B d
+Delete selected message
+.TP
+.B o
+Open attachments/links in default browser
+.TP
+.B y
+Yank message content
+.TP
+.B u
+Yank message URL
+.TP
+.B i
+Yank message ID
+.SS Message Input
+.TP
+.B Ctrl+V
+Paste from clipboard (text/images)
+.TP
+.B Enter
+Send message
+.TP
+.B Esc
+Clear input or cancel reply
+.TP
+.B Tab
+Complete username mentions
+.TP
+.B Ctrl+E
+Open external editor
+.TP
+\fBCtrl+\\\fP
+Open file picker
+.SS Mentions List
+.TP
+.B Ctrl+P
+Move selection up
+.TP
+.B Ctrl+N
+Move selection down
+.SH THEME CUSTOMIZATION
+.SS Title Bar
+.TP
+.B alignment = "left"
+Title alignment: "left", "center", or "right"
+.SS Border
+.TP
+.B enabled = true
+Enable/disable border
+.TP
+.B padding = [0, 0, 1, 1]
+Border padding [top, bottom, left, right]
+.TP
+.B normal_set = "round"
+Inactive border style
+.TP
+.B active_set = "round"
+Active border style
+.SS Guilds Tree
+.TP
+.B auto_expand_folders = true
+Automatically expand folder nodes
+.TP
+.B graphics = true
+Show tree graphics
+.SS Messages List
+.TP
+.B reply_indicator = ">"
+Character indicating replies
+.TP
+.B forwarded_indicator = "<"
+Character indicating forwarded messages
+.SH FILES
+.TP
+.I ~/.config/discordo/config.toml
+Configuration file location
+.SH SEE ALSO
+.TP
+.B discord.com
+Official Discord website
+.SH BUGS
+Report bugs at the Discordo GitHub repository
+.SH AUTHOR
+Discordo development team
